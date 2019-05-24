@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BN clone</title>
+    <link rel="stylesheet" href="css/basestyle.css" />
+  </head>
+  <body>
+
+    <!--Pause button-->
+    <div id="pause-button">
+     <button class=" myBtn" onclick="videoController.pause()">
+      pause
+    </button>
+    </div>
+    
+    <!--Painel-->
+    <div id="top-painel" class="options-group">
+      <div class="grid-item"> 
+        <button onclick="videoController.play()"  class=" myBtn  roundbutton" id="play-button">Play !</button>
+        <button onclick="videoController.reload()" class="myBtn roundbutton">restart</button>
+        <button id="ebut" onclick="optionsController.show()" class="myBtn roundbutton"> mostrar escolhas</button>
+        <button id="ebut" onclick="optionsController.hide()" class="myBtn roundbutton"> esconder  escolhas</button>
+        
+      
+      </div>
+    </div>
+
+
+    <!-- The video -->
+    <video autoplay id="myVideo">
+      <source src="" type="video/mp4" />
+    </video>
+    <!--options-->
+
+    <div id="options-group" class="options-group hide">
+      <div class="grid-item">
+        <button class="myBtn large-button" id="myBtn1" onclick="listReader.Chose1()">Pause</button>
+      </div>
+      <div class="grid-item">
+        <button class="myBtn large-button" id="myBtn2" onclick="listReader.Chose2()">Pause</button>
+      </div>
+    </div>
+  </body>
+
+  <!--SCRIPTS-->
+  <script src="js/jquery.js"></script>
+  <script src="js/OptionsController.js"></script>
+  <script src="videolist.js"></script>
+  <script src="js/Video.js"></script>
+  <script src="js/videoController.js"></script>
+  <script src="js/ListReader.js"></script>
+
+  <script src="js/basescritp.js"></script>
+</html>
+
+
+
+<!--
+
+  https://www.w3schools.com/tags/ref_av_dom.asp
+  https://www.w3schools.com/tags/av_prop_duration.asp
+  https://www.w3schools.com/tags/av_prop_currenttime.asp
+  https://www.w3schools.com/tags/av_event_ended.asp
+-->
