@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>BN clone</title>
     <link rel="stylesheet" href="css/basestyle.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+</head>
+
+<body>
     <!--Pause button-->
     <div id="pause-button">
-      <button class=" myBtn" onclick="videoController.pause()">
+        <button class=" myBtn" onclick="videoController.pause()">
         <i class="far fa-pause-circle"></i>
       </button>
     </div>
 
     <!--Painel-->
     <div id="top-painel" class="options-group">
-      <div class="grid-item">
-        <button
-          onclick="videoController.play()"
-          class=" myBtn  roundbutton"
-          id="play-button"
-        >
+        <div class="grid-item">
+            <button onclick="videoController.play()" class=" myBtn  roundbutton" id="play-button">
           <i class="far fa-play-circle">Play</i>
         </button>
-        <button onclick="videoController.reload()" class="myBtn roundbutton">
+            <button onclick="videoController.reload()" class="myBtn roundbutton">
           <i class="fas fa-redo-alt"></i>
         </button>
-        <button
-          id="ebut"
-          onclick="optionsController.show()"
-          class="myBtn roundbutton"
-        >
+            <button id="ebut" onclick="optionsController.show()" class="myBtn roundbutton">
           <i class="fas fa-eye"></i>
         </button>
-        <button
-          id="ebut"
-          onclick="optionsController.hide()"
-          class="myBtn roundbutton"
-        >
+            <button id="ebut" onclick="optionsController.hide()" class="myBtn roundbutton">
           <i class="fas fa-eye-slash"></i>
         </button>
-      </div>
+
+            <button id="ebut" onclick="videoController.advance(10)" class="myBtn roundbutton">
+          <i class="fas fa-step-forward"></i>
+        </button>
+            <button id="ebut" onclick="videoController.regress(10)" class="myBtn roundbutton">
+          <i class="fas fa-step-backward"></i>
+        </button>
+        </div>
     </div>
 
     <!-- The video -->
@@ -58,36 +50,29 @@
     <!--options-->
 
     <div id="options-group" class="options-group hide">
-      <div class="grid-item">
-        <button
-          class="myBtn large-button"
-          id="myBtn1"
-          onclick="listReader.Chose1()"
-        >
+        <div class="grid-item">
+            <button class="myBtn large-button" id="myBtn1" onclick="listReader.Chose1()">
           Pause
         </button>
-      </div>
-      <div class="grid-item">
-        <button
-          class="myBtn large-button"
-          id="myBtn2"
-          onclick="listReader.Chose2()"
-        >
+        </div>
+        <div class="grid-item">
+            <button class="myBtn large-button" id="myBtn2" onclick="listReader.Chose2()">
           Pause
         </button>
-      </div>
+        </div>
     </div>
-  </body>
+</body>
 
-  <!--SCRIPTS-->
-  <script src="js/jquery.js"></script>
-  <script src="js/OptionsController.js"></script>
-  <script src="videolist.js"></script>
-  <script src="js/Video.js"></script>
-  <script src="js/videoController.js"></script>
-  <script src="js/ListReader.js"></script>
+<!--SCRIPTS-->
+<script src="js/jquery.js"></script>
+<script src="js/OptionsController.js"></script>
+<script src="videolist.js"></script>
+<script src="js/Video.js"></script>
+<script src="js/videoController.js"></script>
+<script src="js/ListReader.js"></script>
 
-  <script src="js/basescritp.js"></script>
+<script src="js/basescritp.js"></script>
+
 </html>
 
 <!--
