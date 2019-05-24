@@ -8,21 +8,21 @@ listReader.playFirst();
 console.log("list:" + listReader.listVideos);
 
 document.onkeyup = function(e) {
-  //key: space
-  if (e.which == 32) {
-    if (!videoController.IsPaused()) {
-      videoController.pause();
-    } else {
-      videoController.play();
+    //key: space
+    if (e.which == 32) {
+        if (!videoController.IsPaused()) {
+            videoController.pause();
+        } else {
+            videoController.play();
+        }
+        //key: p
+    } else if (e.which == 80) {
+        videoController.play();
+        //key: r
+    } else if (e.which == 82) {
+        videoController.reload();
+        //key o
+    } else if (e.which == 79) {
+        optionsController.toggle();
     }
-    //key: p
-  } else if (e.which == 80) {
-    videoController.play();
-    //key: r
-  } else if (e.which == 82) {
-    videoController.reload();
-    //key o
-  } else if (e.which == 79) {
-    optionsController.toggle();
-  }
 };
