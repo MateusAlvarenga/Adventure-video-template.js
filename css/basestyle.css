@@ -31,41 +31,34 @@ body {
   grid-row-gap: 20px;
   justify-items: stretch;
   align-items: stretch;
-   
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-#top-painel{
+#top-painel {
   bottom: auto;
   top: 0;
   z-index: 1;
- 
 }
-
 
 .grid-item {
   margin-left: 30%;
 }
 
-
-
 .myBtn {
- 
   font-size: 18px;
   padding: 10px;
   border: none;
   background: #000;
   color: #fff;
-  cursor: pointer; text-align: center;
+  cursor: pointer;
+  text-align: center;
 }
 
- 
-
 .myBtn:hover {
-  background: rgb(96, 96, 255);  
+  background: rgb(96, 96, 255);
   color: black;
 }
 
@@ -76,20 +69,14 @@ body {
 
 /* Style the button used in options */
 .large-button {
-  width: 200px;  
+  width: 200px;
 }
 
-
-
-#play-button{
-  width: 118px;
-  border-color: cornsilk;
-  border: 5px;
+.roundbutton {
+  border-radius: 50%;
 }
 
-.roundbutton {border-radius: 50%;}
-
-#pause-button{
+#pause-button {
   position: fixed;
   z-index: 1;
   top: 0;
