@@ -1,3 +1,4 @@
+// @ts-nocheck
 var OptionsController = function(tag) {
     this.tag = $("#" + tag);
     this.button1 = $("#" + tag + " button:eq(0)");

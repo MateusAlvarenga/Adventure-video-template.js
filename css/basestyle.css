@@ -19,6 +19,18 @@ body {
     min-height: 100%;
 }
 
+.header {
+    grid-area: header;
+}
+
+.b1 {
+    grid-area: left;
+}
+
+.b2 {
+    grid-area: right;
+}
+
 .options-group {
     position: fixed;
     bottom: 0;
@@ -27,7 +39,7 @@ body {
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'header header header header header header' 'left left left right right right';
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     justify-items: stretch;
@@ -73,6 +85,7 @@ body {
 
 .large-button {
     width: 200px;
+    margin-left: 140px
 }
 
 .roundbutton {
@@ -94,4 +107,9 @@ body {
     font-family: tahoma;
     font-size: 2.1em;
     font-weight: 900
+}
+
+.active {
+    background: rgb(255, 255, 255);
+    color: rgba(92, 45, 201, 0.788);
 }

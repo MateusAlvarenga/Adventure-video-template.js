@@ -14,7 +14,7 @@
 <body>
     <!--Pause button-->
     <div id="pause-button">
-        <button class=" myBtn" onclick="videoController.pause()">
+        <button class="myBtn roundbutton" onclick="videoController.pause()">
         <i class="far fa-pause-circle"></i>
       </button>
     </div>
@@ -22,21 +22,25 @@
     <!--Painel-->
     <div id="top-painel" class="options-group">
         <div class="grid-item">
-            <button onclick="videoController.play()" class=" myBtn  roundbutton" id="play-button">
+            <button onclick="videoController.play()" class="myBtn roundbutton" id="play-button">
           <i class="far fa-play-circle">Play</i>
         </button>
             <button onclick="videoController.reload()" class="myBtn roundbutton">
           <i class="fas fa-redo-alt"></i>
         </button>
-            <button id="ebut" onclick="optionsController.toggle()" class="myBtn roundbutton">
+            <button id="ebut" onclick="optionsController.toggle()" class="myBtn
+          roundbutton">
           <i class="fas fa-eye"></i>
- 
-
-            <button id="ebut" onclick="videoController.advance(10)" class="myBtn roundbutton">
-          <i class="fas fa-step-forward"></i>
         </button>
-            <button id="ebut" onclick="videoController.regress(10)" class="myBtn roundbutton">
+
+
+            <button id="ebut" onclick="videoController.regress(10)" class="myBtn
+          roundbutton">
           <i class="fas fa-step-backward"></i>
+        </button>
+            <button id="ebut" onclick="videoController.advance(10)" class="myBtn
+          roundbutton">
+          <i class="fas fa-step-forward"></i>
         </button>
 
         </div>
@@ -47,17 +51,23 @@
       <source src="" type="video/mp4" />
     </video>
     <!--options-->
+    <div>
 
-    <div id="options-group" class="options-group hide">
-        <div class="grid-item">
-            <button class="myBtn large-button" id="myBtn1" onclick="listReader.Chose1()">
-          Pause
-        </button>
-        </div>
-        <div class="grid-item">
-            <button class="myBtn large-button" id="myBtn2" onclick="listReader.Chose2()">
-          Pause
-        </button>
+        <div id="options-group" class="options-group hide">
+
+            <div div="header">
+                <div id="loading-bar" data-preset="energy" class="ldBar" data-value="0"></div>
+            </div>
+            <div class="b1">
+                <button class="myBtn large-button" id="myBtn1" onclick="listReader.Chose1()">
+            Pause
+          </button>
+            </div>
+            <div class="b2">
+                <button class="myBtn large-button" id="myBtn2" onclick="listReader.Chose2()">
+            Pause
+          </button>
+            </div>
         </div>
     </div>
 </body>
@@ -81,18 +91,21 @@
   https://www.w3schools.com/tags/av_prop_currenttime.asp
   https://www.w3schools.com/tags/av_event_ended.asp
 -->
-
 <!--
-var bar1 = new ldBar("#myItem1");
-var bar2 = document.getElementById('myItem1').ldBar;
-bar1.set(20); 
-bar1.set(1);
+
+  var bar2 = document.getElementById('loading-bar').ldBar;
+
+
+var bar1 = new ldBar("#loading-bar");
+bar1.set(); 
+bar1.set(10);
+
  
 //contagem
 var interval = setInterval(function(){bar1.set(bar1.value + 1); console.log(bar1.value);}, 100);
-setTimeout(function(){clearInterval(interval)},10000);
+setTimeout(function(){clearInterval(interval);console.log('finaliza...')},10000);
 
- <div id="myItem1" data-preset="line" class="ldBar  " data-value="0"></div>
+ 
 
 //verifica tempo
 setInterval(function(){console.log(videoController.tag[0].duration - videoController.tag[0].currentTime)},1000);
